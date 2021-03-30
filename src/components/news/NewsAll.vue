@@ -16,12 +16,15 @@
     export default {
         data() {
             return {
-                news: [
-                    {id: 1, title: 'Новость 01', text: 'Текст новости 01'},
-                    {id: 2, title: 'Новость 02', text: 'Текст новости 02'},
-                    {id: 3, title: 'Новость 03', text: 'Текст новости 03'},
-                ]
+                news: []
             }
+        },
+        created() {
+            fetch(`https://jsonplaceholder.typicode.com/todos/`)
+                .then(response => response.json())
+                .then(json => {
+                    this.news = json;
+                });
         },
         components: {
         }
