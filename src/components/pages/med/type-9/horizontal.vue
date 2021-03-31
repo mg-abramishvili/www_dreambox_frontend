@@ -36,12 +36,12 @@
                 .then(response => response.json())
                 .then(json => {
                     this.page = json;
-                    this.loading = false;
-                });
-            fetch(`http://localhost/img/example.xlsx`)
-                .then(response => response.blob())
-                .then(blob => {
-                    this.excel_file = blob;
+                    fetch(`http://localhost${this.page.excel}`)
+                        .then(response => response.blob())
+                        .then(blob => {
+                            this.excel_file = blob;
+                            this.loading = false;
+                        });
                 });
         },
         components: {
