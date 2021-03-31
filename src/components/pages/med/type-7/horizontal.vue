@@ -5,7 +5,7 @@
         <div v-else class="row">
             <div class="col-12">
                 <div class="text">
-                    <pdf :src="'http://localhost' + page.pdf"></pdf>
+                    <iframe :src="'/lib/pdfjs/web/viewer.html?file=' + 'http://localhost' + page.pdf" height="100%" width="100%"></iframe>
                 </div>
             </div>
         </div>
@@ -14,7 +14,6 @@
 
 <script>
     import MedLoader from '@/components/partials/med/loader.vue'
-    import pdf from 'vue-pdf'
 
     export default {
         data() {
@@ -32,8 +31,7 @@
                 });
         },
         components: {
-            MedLoader,
-            pdf
+            MedLoader
         }
     }
 </script>
