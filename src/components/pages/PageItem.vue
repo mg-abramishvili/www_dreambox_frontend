@@ -7,6 +7,7 @@
                     <MedPageType2Horizontal v-else-if="type.id == '2'" />
                     <MedPageType6Horizontal v-else-if="type.id == '6'" />
                     <MedPageType7Horizontal v-else-if="type.id == '7'" />
+                    <MedPageType9Horizontal v-else-if="type.id == '9'" />
                 </div>
             </div>
         </div>
@@ -18,6 +19,7 @@
     import MedPageType2Horizontal from '@/components/pages/med/type-2/horizontal'
     import MedPageType6Horizontal from '@/components/pages/med/type-6/horizontal'
     import MedPageType7Horizontal from '@/components/pages/med/type-7/horizontal'
+    import MedPageType9Horizontal from '@/components/pages/med/type-9/horizontal'
 
     export default {
         data() {
@@ -42,7 +44,8 @@
             MedPageType1Horizontal,
             MedPageType2Horizontal,
             MedPageType6Horizontal,
-            MedPageType7Horizontal
+            MedPageType7Horizontal,
+            MedPageType9Horizontal
         }
     }
 </script>
