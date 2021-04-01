@@ -22,7 +22,6 @@
                 .then(response => response.json())
                 .then(json => {
                     this.settings = json;
-                    
                     if (this.settings.theme === 'med'){
                         require('@/../public/css/style-med.css');
                     } else if (this.settings.theme === 'shkola') {

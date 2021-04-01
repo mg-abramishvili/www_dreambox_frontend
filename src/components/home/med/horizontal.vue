@@ -40,6 +40,12 @@
             }
         },
         created() {
+            fetch(`http://localhost/api/front/settings/`)
+                .then(response => response.json())
+                .then(json => {
+                    this.settings = json;
+                    this.loading = false;
+                });
             fetch(`http://localhost/api/front/pages/`)
                 .then(response => response.json())
                 .then(json => {
