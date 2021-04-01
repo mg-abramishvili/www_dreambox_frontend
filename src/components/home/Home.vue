@@ -45,6 +45,7 @@
                 .then(response => response.json())
                 .then(json => {
                     this.settings = json;
+                    this.loading = false;
                 });
         },
         components: {

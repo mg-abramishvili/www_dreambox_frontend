@@ -43,7 +43,7 @@ main {
     margin: 0 auto;
     background: #fff;
     background: #dce6f0;;
-    background: url('/img/shkola/bg.jpg');
+    background: url('http://localhost/img/shkola/bg.jpg');
     border: 1px solid #ccc;
 }
 

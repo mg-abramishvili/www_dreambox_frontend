@@ -24,6 +24,10 @@ export default new Router({
             path: '/pages/:id',
             name: 'PageItem',
             component: () => import('./components/pages/PageItem')
+        },
+        {
+            path: '/r01routes',
+            component: () => import('./components/routes/RoutesAll')
         }
     ]
 })

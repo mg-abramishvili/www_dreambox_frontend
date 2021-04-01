@@ -15,7 +15,11 @@
                     </div>
                 </div>
 
-
+                <div v-if="settings.module_routes === 'y'" class="col-6">
+                    <router-link to="/r01routes/" class="index-button">
+                        <span>План клиники</span>
+                    </router-link>
+                </div>
 
             </div>
         </div>
@@ -29,6 +33,7 @@
     export default {
         data() {
             return {
+                settings: {},
                 pages: [],
                 news: [],
                 loading: true,
