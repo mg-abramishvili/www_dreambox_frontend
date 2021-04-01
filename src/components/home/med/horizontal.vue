@@ -5,7 +5,7 @@
         <div v-else-if="pages.length" class="container container-index">
             <div class="row sortable">
 
-                <div v-for="page in pages" class="col-6">
+                <div v-for="page in pages" class="col-6" v-bind:key="page.id">
                     <div class="user-pages-item-item">
                         <router-link :to="{name: 'PageItem', params: {id: page.id}}" class="index-button">
                             <div v-if="page.image_as_icon === '1'" class="user-pages-item-image" v-bind:style="{ 'background-image': 'url(http://localhost' + page.image + ')' }"></div>
